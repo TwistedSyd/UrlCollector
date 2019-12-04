@@ -1,0 +1,16 @@
+{
+  "name": "URL Collector",
+  "version": "1.0",
+  "description": "This extension enables G5 users to get all website URLs straight from the Client Hub.",
+  "content_scripts": [
+    {
+      "matches": ["https://g5-hub.herokuapp.com/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "/assets/favicon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
