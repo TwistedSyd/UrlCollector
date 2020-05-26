@@ -53,6 +53,10 @@ function parseData(clientData) {
         link = locations[i].domain;
       }
       liveLinks.push(link);
+      /* Remove 's'  and 'www.' from 'https://' for static and staging URLs */
+      if(link[4] === 's') {
+        link = link.splice(4, 1, '');
+      }
       var positionSlash = getPosition(link, '/', 3);
       newLink = link.splice(positionSlash, 0, '.g5static.com');
       staticLinks.push(newLink);
