@@ -1,16 +1,16 @@
 {
   "name": "URL Collector",
-  "version": "1.6",
+  "version": "2",
   "description": "This extension enables G5 users to get all website URLs straight from the Client Hub.",
   "content_scripts": [
     {
-      "matches": ["https://hub.g5marketingcloud.com/*"],
+      "matches": ["https://hub.g5marketingcloud.com/*", "https://hub-content-staging.g5devops.com/*", "https://hub-content-prime.g5devops.com/*"],
       "js": ["jquery.js", "content.js"]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_icon": "/assets/favicon.png",
     "default_popup": "popup.html"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
